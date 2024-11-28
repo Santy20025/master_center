@@ -1,11 +1,16 @@
+const { DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DB_USER } = require('./config');
+
+
 const mysql = require('mysql2');
 
+
+
 const connection = mysql.createConnection({
-  host: '127.0.0.1',  
-  port: 3306,         
-  user: 'root',       
-  password: '',        
-  database: 'master_center',
+  host: DB_HOST,  
+  port: DB_PORT,         
+  user: DB_USER,       
+  password: DB_PASSWORD,        
+  database: DB_NAME,
   connectTimeout: 1000000
 });
 
