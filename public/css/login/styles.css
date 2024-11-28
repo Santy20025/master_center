@@ -1,0 +1,152 @@
+# {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura completa de la ventana */
+    background-color: #f4f4f4; /* Fondo gris claro */
+}
+
+/* Estilos para los formularios */
+# .u-form {
+    background-color: c5a44f;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Estilo de los títulos dentro de los formularios */
+#login-wrapper h4 {
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo de los inputs */
+#login-wrapper input {
+    font-family: 'Arial', sans-serif; 
+    font-size: 1em;
+    color: #333;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #eeebe5; 
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: border-color 0.3s ease; /* Transición suave */
+}
+
+/* Input (clic) */
+#login-wrapper input:focus {
+    border: 1px solid #038cae; /* Borde dorado */
+    outline: none; 
+}
+
+
+/* Estilo de las etiquetas */
+#login-wrapper label {
+    font-family: 'Arial', sans-serif; 
+    color: #333;
+}
+
+/* Estilo del botón de enviar */
+#login-wrapper .boton.enviar {
+    font-family: 'Arial', sans-serif; 
+    background-color: #038cae; 
+    color: white;
+    font-size: 1em;
+    padding: 10px;
+    border: none; /* Sin borde */
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s ease;
+    background-color: #038cae;
+    
+}
+
+#login-wrapper .boton.enviar:hover {
+    background-color: #038cae; /* Fondo dorado oscuro en hover */
+}
+
+/* Estilos para los enlaces */
+#login-wrapper a {
+    font-family: 'Arial', sans-serif; 
+    font-size: 1em;
+    color: #e32424; 
+    text-decoration: none;
+    transition: 0.3s ease; /* Transición suave */
+}
+
+#login-wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo del texto de información o preguntas */
+#login-wrapper p {
+    font-family: 'Arial', sans-serif; 
+    font-size: 1em;
+    text-align: center;
+    color: #181818;
+}
+
+.password-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#passwordInput {
+    width: 100%;
+    padding-right: 40px; /* Espacio extra para el ícono */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password i {
+    font-size: 1.2em;
+    color: #038cae;
+}
+
+#login-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-left: -10vh;
+    height: 100vh; /* Ajusta el alto según tu diseño */
+}
+
+.u-form {
+    max-width: 300px; /* Ajusta el ancho máximo según tu diseño */
+    margin: 0 auto;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+#passwordInput {
+    padding-right: 40px; /* Espacio para el ícono */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.toggle-password i {
+    font-size: 1.2em;
+    color: #038cae;
+}
+

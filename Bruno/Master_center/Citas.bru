@@ -1,0 +1,24 @@
+meta {
+  name: Citas
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:3001/cliente/cliente/12
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+  "nombres": "Juan Carvajal",
+    "correo": "admin2@gmail.com",
+    "contrasena": "7",
+    "direccion": "fsjfshfsgd",
+    "celular": 2147483647,
+    "fechaRegistro": "2024-10-30 16:49:55",
+    "IdUsuarioFK": 2
+    
+  }
+}

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>Master Center</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <!-- fevicon -->
+    <link rel="icon" href="../../images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
+    <!-- Tweaks for older IEs-->
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen"
+    />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
+    ><![endif]-->
+  </head>
+  <!-- body -->
+  <div class="main-layout">
+    <!-- loader  -->
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+      <!-- header inner -->
+      <div class="header">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+              <div class="full">
+                <div class="center-desk">
+                  <div class="logo">
+                    <img src="../../images/Master_center.png" alt="#" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+              <nav class="navigation navbar navbar-expand-md navbar-dark">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarsExample04"
+                  aria-controls="navbarsExample04"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarsExample04">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="inicio2.html">
+                        <i class="fas fa-home"></i>
+                        Inicio
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="citas.html">
+                        <i class="fas fa-calendar-check"></i>
+                        Citas
+                      </a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="clientes.html">
+                        <i class="fas fa-users"></i>
+                        Clientes
+                      </a>
+                    </li>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="empleados.html">
+                        <i class="fas fa-id-badge"></i>
+                        Empleados
+                      </a>
+                    </li>
+                    <li class="nav-item d_none ">
+                      <a class="nav-link" href="historial.html">
+                        <i class="fas fa-history"></i>
+                        Historial
+                      </a>
+                    </li>
+                    <li class="nav-item d_none active">
+                      <a class="nav-link" href="repuesto.html">
+                        <i class="fas fa-cogs"></i>
+                        Repuestos
+                      </a>
+                    </li>
+                    <li class="nav-item d_none">
+                      <a class="nav-link" href="servicio.html">
+                        <i class="fas fa-tools"></i>
+                        Servicios
+                      </a>
+                    </li>
+                    <li class="nav-item d_none">
+                      <a class="nav-link" href="vehiculos.html">
+                        <i class="fas fa-car"></i>
+                        Vehiculos
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="perfil.html">
+                        <i class="fas fa-user"></i>
+                        Perfil
+                      </a>
+                    </li>
+                    <li class="nav-item d_none login_btn">
+                      <a class="nav-link" href="../index.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Cerrar Sesion
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header inner -->
+    <!-- end header -->
+     <body>
+        <div class="container-alertas">
+        <h1 class="custom-title">Repuestos</h1>
+        <div class="search-bar d-flex justify-content-between align-items-center mb-3">
+          <input type="text" class="form-control me-2" placeholder="Buscar repuestos..." />
+          <button class="btn-primary-alertas" data-bs-toggle="modal" data-bs-target="#addAlertModal">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Ubicación</th>
+              <th>Proveedor</th>
+              <th>Empleado</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="repuestosTableBody">
+            
+          </tbody>
+        </table>
+      
+        <!-- Add Alert Modal -->
+        <div class="modal fade" id="addAlertModal" tabindex="-1" aria-labelledby="addAlertModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close btn-close-left" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="addAlertModalLabel">Agregar Repuesto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="addRepuestoForm" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label" style="font-weight: bold; color: #333;">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="categoria" class="form-label" style="font-weight: bold; color: #333;">
+                      Categoría
+                    </label>
+                    <select class="form-control" id="categoria" required>
+                      <option value="" disabled selected></option>
+                      <option value="pendiente">Pendiente</option>
+                      <option value="en_proceso">En Proceso</option>
+                      <option value="completada">Completada</option>
+                    </select>
+                  </div>
+                  
+                  <div class="mb-3" style="grid-column: span 2;">
+                    <label for="descripcion" class="form-label" style="font-weight: bold; color: #333;">Descripción</label>
+                    <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="precio" class="form-label" style="font-weight: bold; color: #333;">Precio</label>
+                    <input type="number" class="form-control" id="precio" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cantidad" class="form-label" style="font-weight: bold; color: #333;">Cantidad</label>
+                    <input type="number" class="form-control" id="cantidad" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="ubicacion" class="form-label" style="font-weight: bold; color: #333;">Ubicación</label>
+                    <input type="text" class="form-control" id="ubicacion" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="proveedor" class="form-label" style="font-weight: bold; color: #333;">Proveedor</label>
+                    <input type="text" class="form-control" id="proveedor" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="empleado" class="form-label" style="font-weight: bold; color: #333;">Empleado</label>
+                    <input type="text" class="form-control" id="empleado" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="estado" class="form-label" style="font-weight: bold; color: #333;">
+                      Estado
+                    </label>
+                    <select class="form-control" id="estado" required>
+                      <option value="" disabled selected></option>
+                      <option value="Agotado">Agotado</option>
+                      <option value="Por agotarse">Por agotarse</option>
+                      <option value="Descontinuado">Descontinuado</option>
+                      <option value="Activo">Activo</option>
+                    </select>
+                  </div>
+                  
+                  <div class="mb-3" style="grid-column: span 2; text-align: right;">
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                  </div>
+                </form>
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Edit Alert Modal -->
+        <div class="modal fade" id="editRepuestoModal" tabindex="-1" aria-labelledby="editAlertModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close btn-close-left" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="editAlertModalLabel">Editar Repuesto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="editRepuestoForm" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                  <div class="mb-3">
+                    <label for="editNombre" class="form-label" style="font-weight: bold; color: #333;">Nombre</label>
+                    <input type="text" class="form-control" id="editNombre" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editCategoria" class="form-label" style="font-weight: bold; color: #333;">
+                      Categoría
+                    </label>
+                    <select class="form-control" id="editCategoria" required>
+                      <option value="" disabled selected></option>
+                      <option value="Pendiente">Pendiente</option>
+                      <option value="En Proceso">En Proceso</option>
+                      <option value="Completada">Completada</option>
+                    </select>
+                  </div>
+                  
+                  <div class="mb-3" style="grid-column: span 2;">
+                    <label for="editDescripcion" class="form-label" style="font-weight: bold; color: #333;">Descripción</label>
+                    <textarea class="form-control" id="editDescripcion" rows="3" required></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label for="editPrecio" class="form-label" style="font-weight: bold; color: #333;">Precio</label>
+                    <input type="number" class="form-control" id="editPrecio" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editCantidad" class="form-label" style="font-weight: bold; color: #333;">Cantidad</label>
+                    <input type="number" class="form-control" id="editCantidad" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editUbicacion" class="form-label" style="font-weight: bold; color: #333;">Ubicación</label>
+                    <input type="text" class="form-control" id="editUbicacion" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editProveedor" class="form-label" style="font-weight: bold; color: #333;">Proveedor</label>
+                    <input type="text" class="form-control" id="editProveedor" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editEmpleado" class="form-label" style="font-weight: bold; color: #333;">Empleado</label>
+                    <input type="text" class="form-control" id="editEmpleado" required />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editEstado" class="form-label" style="font-weight: bold; color: #333;">
+                      Estado
+                    </label>
+                    <select class="form-control" id="editEstado" required>
+                      <option value="" disabled selected></option>
+                      <option value="Agotado">Agotado</option>
+                      <option value="Por agotarse">Por agotarse</option>
+                      <option value="Descontinuado">Descontinuado</option>
+                      <option value="Activo">Activo</option>
+                    </select>
+                  </div>
+                    
+                      <div class="mb-3" style="grid-column: span 2; text-align: right;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Guardar cambios</button>
+                      </div>
+                  
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Delete Alert Modal -->
+        <div class="modal fade" id="deleteRepuestoModal" tabindex="-1" aria-labelledby="deleteAlertModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteAlertModalLabel">Eliminar Repuesto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar este repuesto?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button class="btn btn-danger" id="deleteRepuesto"  >Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+
+    <!--  footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h3 class="footer-title">Contactanos</h3>
+            <ul class="location_icon">
+              <li>
+                <a href="#"
+                  ><i class="fa fa-map-marker" aria-hidden="true"></i
+                ></a>
+                cl 134 Bis #45a-20!<br />
+                Bogotá
+              </li>
+              <li>
+                <a href="#"
+                  ><i
+                    class="fa fa-volume-control-phone"
+                    aria-hidden="true"
+                  ></i></a
+                >+57 3118089487
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h3 class="footer-title">Redes Sociales</h3>
+            <ul class="social_icon">
+              <li>
+                <a
+                  href="https://www.facebook.com/groups/569329231237225/?ref=share&mibextid=NSMWBT"
+                  ><i class="fa fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@mastercenter_plus?_t=8oTBfyMPmtS&_r=1"
+                  ><i class="fa fa-tiktok"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/mastercenter_plus?igsh=M2UxMmxpaWpxcWky"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <!-- sidebar -->
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/custom.js"></script>
+
+    <!-- Bootstrap JS (para funcionalidad del modal) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+      // Función para cargar todos los repuestos
+function loadRepuestos() {
+  fetch('/repuestos/repuestos')
+    .then(response => response.json())
+    .then(data => {
+      const repuestosTableBody = document.getElementById('repuestosTableBody');
+      repuestosTableBody.innerHTML = '';
+
+      data.forEach(repuesto => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${repuesto.Nombre}</td>
+          <td>${repuesto.Descripcion}</td>
+          <td>${repuesto.Categoria}</td>
+          <td>${repuesto.Precio}</td>
+          <td>${repuesto.Cantidad}</td>
+          <td>${repuesto.Ubicacion}</td>
+          <td>${repuesto.Proveedor}</td>
+          <td>${repuesto.Empleado}</td>
+          <td>${repuesto.Estado}</td>
+          <td>
+            <button class="btn btn-warning me-2" onclick="openEditModal('${repuesto.Id_Repuesto}')">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-danger" onclick="openDeleteModal('${repuesto.Id_Repuesto}')">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        `;
+        repuestosTableBody.appendChild(row);
+      });
+    })
+    .catch(error => {
+      console.error('Error al obtener los repuestos:', error);
+      alert('Error al cargar los repuestos. Por favor, intente de nuevo.');
+    });
+}
+
+// Llamar a la función al cargar la página
+document.addEventListener('DOMContentLoaded', loadRepuestos);
+
+// Función para agregar un nuevo repuesto
+document.getElementById('addRepuestoForm').addEventListener('submit', async function(e) {
+  e.preventDefault();  // Evita que el formulario se envíe automáticamente
+
+  // Obtener los valores del formulario
+  const nombre = document.getElementById('nombre').value.trim();
+  const descripcion = document.getElementById('descripcion').value.trim();
+  const categoria = document.getElementById('categoria').value;
+  const precio = parseFloat(document.getElementById('precio').value);
+  const cantidad = parseInt(document.getElementById('cantidad').value);
+  const ubicacion = document.getElementById('ubicacion').value.trim();
+  const proveedor = document.getElementById('proveedor').value.trim();
+  const empleado = document.getElementById('empleado').value.trim();
+  const estado = document.getElementById('estado').value;
+
+  // Validación de campos (puedes agregar validaciones específicas si es necesario)
+  if (!nombre || !descripcion || isNaN(precio) || isNaN(cantidad) || !estado || !categoria) {
+    alert('Por favor, complete todos los campos correctamente.');
+    return; // Evita enviar si hay campos vacíos o inválidos
+  }
+
+  const repuestoData = {
+    Nombre: nombre,
+    Descripcion: descripcion,
+    Categoria: categoria,
+    Precio: precio,
+    Cantidad: cantidad,
+    Ubicacion: ubicacion,
+    Proveedor: proveedor,
+    Empleado: empleado,
+    Estado: estado
+  };
+
+  // Enviar la solicitud para agregar el repuesto
+  try {
+    const response = await fetch('/repuestos/repuestos', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repuestoData)
+    });
+
+    // Verifica si la respuesta es correcta
+    const responseData = await response.json();
+    if (!response.ok) {
+      throw new Error(responseData.error || 'Error desconocido');
+    }
+
+    console.log('Repuesto agregado:', responseData);
+    alert('Repuesto agregado exitosamente');
+    
+    // Limpiar el formulario
+    document.getElementById('addRepuestoForm').reset();
+    
+    // Recargar la lista de repuestos
+    loadRepuestos();
+
+    // Cerrar el modal después de éxito
+    $('#addRepuestoModal').modal('hide');
+
+  } catch (error) {
+    // Si ocurre un error, mostramos un mensaje claro en el modal
+    console.error('Error al agregar el repuesto:', error);
+    alert('Error al agregar el repuesto: ' + error.message);
+    
+    // Asegurarse de que el modal no se cierre si hubo error
+    // No cerramos el modal si hay un error
+  }
+});
+
+
+// Función para abrir el modal de edición
+function openEditModal(id) {
+  currentRepuestoId = id;
+  fetch(`/repuestos/repuestos/${id}`)
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('editNombre').value = data.Nombre;
+      document.getElementById('editDescripcion').value = data.Descripcion;
+      document.getElementById('editCategoria').value = data.Categoria;
+      document.getElementById('editPrecio').value = data.Precio;
+      document.getElementById('editCantidad').value = data.Cantidad;
+      document.getElementById('editUbicacion').value = data.Ubicacion;
+      document.getElementById('editProveedor').value = data.Proveedor;
+      document.getElementById('editEmpleado').value = data.Empleado;
+      document.getElementById('editEstado').value = data.Estado;
+
+      $('#editRepuestoModal').modal('show');
+    })
+    .catch(error => {
+      console.error('Error al obtener el repuesto:', error);
+      alert('Error al cargar los datos del repuesto. Por favor, intente de nuevo.');
+    });
+}
+
+document.getElementById('editRepuestoForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  // Recolectar los datos del formulario
+  const repuestoData = {
+    Nombre: document.getElementById('editNombre').value.trim(),
+    Descripcion: document.getElementById('editDescripcion').value.trim(),
+    Categoria: document.getElementById('editCategoria').value,
+    Precio: parseFloat(document.getElementById('editPrecio').value),
+    Cantidad: parseInt(document.getElementById('editCantidad').value),
+    Ubicacion: document.getElementById('editUbicacion').value.trim(),
+    Proveedor: document.getElementById('editProveedor').value.trim(),
+    Empleado: document.getElementById('editEmpleado').value.trim(),
+    Estado: document.getElementById('editEstado').value
+  };
+
+  // Validaciones de campos
+  if (!repuestoData.Nombre || !repuestoData.Descripcion || isNaN(repuestoData.Precio) || isNaN(repuestoData.Cantidad) || !repuestoData.Estado || !repuestoData.Categoria) {
+    alert('Por favor, complete todos los campos correctamente.');
+    return;
+  }
+
+  // Verificar que el ID del repuesto actual sea válido
+  if (!currentRepuestoId) {
+    alert('ID de repuesto no válido');
+    return;
+  }
+
+  // Mostrar los datos para depuración
+  console.log('Datos del repuesto a actualizar:', repuestoData);
+
+  try {
+    // Enviar la solicitud PUT al servidor
+    const response = await fetch(`/repuestos/repuestos/${currentRepuestoId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(repuestoData)
+    });
+
+    // Manejo de errores del servidor
+    if (!response.ok) {
+      const errorText = await response.text();  // Obtener la respuesta como texto
+      console.error('Error del servidor:', errorText);  // Mostrar el error completo del servidor
+      throw new Error(errorText || 'Error desconocido');
+    }
+
+    // Si la respuesta es exitosa, parseamos el JSON
+    const data = await response.json();
+    alert('Repuesto actualizado exitosamente');
+
+    // Cerrar el modal y recargar los repuestos
+    $('#editRepuestoModal').modal('hide');
+    loadRepuestos();
+  } catch (error) {
+    // Mostrar un error en caso de que falle la actualización
+    console.error('Error al actualizar el repuesto:', error);
+    alert('Error al actualizar el repuesto: ' + error.message);
+  }
+});
+
+
+// Función para abrir el modal de eliminación
+function openDeleteModal(id) {
+  currentRepuestoId = id;
+  $('#deleteRepuestoModal').modal('show');
+}
+
+// Función para eliminar un repuesto
+document.getElementById('deleteRepuesto').addEventListener('click', function() {
+  if (!currentRepuestoId) {
+    alert('ID de repuesto no válido');
+    return;
+  }
+
+  fetch(`/repuestos/repuestos/${currentRepuestoId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Error del servidor: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log('Repuesto eliminado:', data);
+    alert('Repuesto eliminado exitosamente');
+    $('#deleteRepuestoModal').modal('hide');
+    loadRepuestos();
+  })
+  .catch(error => {
+    console.error('Error al eliminar el repuesto:', error);
+    alert('Error al eliminar el repuesto. Por favor, intente de nuevo.');
+  });
+});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>Master Center</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="../css/responsive.css" />
+    <!-- fevicon -->
+    <link rel="icon" href="../../images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css" />
+    <!-- Tweaks for older IEs-->
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+      media="screen"
+    />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script
+    ><![endif]-->
+  </head>
+  <!-- body -->
+  <div class="main-layout">
+    <!-- loader  -->
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                <div class="full">
+                  <div class="center-desk">
+                    <div class="logo">
+                      <img src="../../images/Master_center.png" alt="#" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                <nav class="navigation navbar navbar-expand-md navbar-dark">
+                  <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarsExample04"
+                    aria-controls="navbarsExample04"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarsExample04">
+                    <ul class="navbar-nav mr-auto">
+                      <li class="nav-item ">
+                        <a class="nav-link" href="inicio1.html">
+                          <i class="fas fa-home"></i>
+                          Inicio
+                        </a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="citas.html">
+                          <i class="fas fa-calendar-check"></i>
+                          Citas
+                        </a>
+                    </li>
+                      <li class="nav-item d_none">
+                        <a class="nav-link" href="historial.html">
+                          <i class="fas fa-history"></i>
+                          Historial
+                        </a>
+                      </li>
+                      <li class="nav-item d_none">
+                        <a class="nav-link" href="vehiculos.html">
+                          <i class="fas fa-car"></i>
+                          Vehiculos
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                          <i class="fas fa-envelope"></i>
+                          Contáctanos
+                        </a>
+                      </li>
+                      <li class="nav-item ">
+                        <a class="nav-link" href="perfil.html">
+                          <i class="fas fa-user"></i>
+                          Perfil
+                        </a>
+                      </li>
+                      <li class="nav-item d_none login_btn">
+                        <a class="nav-link" href="../index.html">
+                          <i class="fas fa-sign-in-alt"></i>
+                          Cerrar Sesion
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- end header inner -->
+    <!-- end header -->
+    <body>
+      <div class="container-alertas">
+        <h1 class="custom-title">Vehículos</h1>
+        <div class="search-bar d-flex justify-content-between align-items-center mb-3">
+          <input type="text" class="form-control me-2" placeholder="Buscar vehículo..." />
+          <button class="btn-primary-alertas" data-bs-toggle="modal" data-bs-target="#addVehicleModal">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
+      
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Placa</th>
+              <th>Cliente</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Año</th>
+              <th>VIN</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="vehicleTableBody">
+            <!-- Los datos de los vehículos se insertarán aquí dinámicamente -->
+          </tbody>
+        </table>
+      
+        <!-- Modal para agregar vehículo -->
+        <div class="modal fade" id="addVehicleModal" tabindex="-1" aria-labelledby="addVehicleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close btn-close-left" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="addVehicleModalLabel">Agregar Vehículo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="addVehicleForm">
+                  <div class="mb-3">
+                    <label for="placa" class="form-label" style="font-weight: bold; color: #333;">Placa</label>
+                    <input type="text" class="form-control" id="placa" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="cliente" class="form-label" style="font-weight: bold; color: #333;">Cliente</label>
+                    <input type="text" class="form-control" id="cliente" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="marca" class="form-label" style="font-weight: bold; color: #333;">Marca</label>
+                    <input type="text" class="form-control" id="marca" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="modelo" class="form-label" style="font-weight: bold; color: #333;">Modelo</label>
+                    <input type="text" class="form-control" id="modelo" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="ano" class="form-label" style="font-weight: bold; color: #333;">Año</label>
+                    <input type="text" class="form-control" id="año" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="vin" class="form-label" style="font-weight: bold; color: #333;">VIN</label>
+                    <input type="text" class="form-control" id="vin" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <button type="submit" class="btn btn-primary">Agregar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal para editar vehículo -->
+        <div class="modal fade" id="editVehicleModal" tabindex="-1" aria-labelledby="editVehicleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="btn-close btn-close-left" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="editVehicleModalLabel">Editar Vehículo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="editVehicleForm">
+                  <div class="mb-3">
+                    <label for="editPlaca" class="form-label" style="font-weight: bold; color: #333;">Placa</label>
+                    <input type="text" class="form-control" id="editPlaca" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editCliente" class="form-label" style="font-weight: bold; color: #333;">Cliente</label>
+                    <input type="text" class="form-control" id="editCliente" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editMarca" class="form-label" style="font-weight: bold; color: #333;">Marca</label>
+                    <input type="text" class="form-control" id="editMarca" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editModelo" class="form-label" style="font-weight: bold; color: #333;">Modelo</label>
+                    <input type="text" class="form-control" id="editModelo" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editAno" class="form-label" style="font-weight: bold; color: #333;">Año</label>
+                    <input type="text" class="form-control" id="editAño" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="editVin" class="form-label" style="font-weight: bold; color: #333;">VIN</label>
+                    <input type="text" class="form-control" id="editVin" style="padding: 10px; border-radius: 8px; border: 1px solid #ced4da;" />
+                  </div>
+                  <button type="submit" class="btn btn-secondary" onclick="editVehicle('${vehicle.Id_Vehiculo}')" >Guardar cambios</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Modal para eliminar vehículo -->
+        <div class="modal fade" id="deleteVehicleModal" tabindex="-1" aria-labelledby="deleteVehicleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="deleteVehicleModalLabel">Eliminar Vehículo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar este vehículo?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="deleteVehicle"  >Eliminar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--  footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h3 class="footer-title">Contactanos</h3>
+            <ul class="location_icon">
+              <li>
+                <a href="#"
+                  ><i class="fa fa-map-marker" aria-hidden="true"></i
+                ></a>
+                cl 134 Bis #45a-20!<br />
+                Bogotá
+              </li>
+              <li>
+                <a href="#"
+                  ><i
+                    class="fa fa-volume-control-phone"
+                    aria-hidden="true"
+                  ></i></a
+                >+57 3118089487
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h3 class="footer-title">Redes Sociales</h3>
+            <ul class="social_icon">
+              <li>
+                <a
+                  href="https://www.facebook.com/groups/569329231237225/?ref=share&mibextid=NSMWBT"
+                  ><i class="fa fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.tiktok.com/@mastercenter_plus?_t=8oTBfyMPmtS&_r=1"
+                  ><i class="fa fa-tiktok"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/mastercenter_plus?igsh=M2UxMmxpaWpxcWky"
+                  ><i class="fa fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery-3.0.0.min.js"></script>
+    <!-- sidebar -->
+    <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../js/custom.js"></script>
+
+    <!-- Bootstrap JS (para funcionalidad del modal) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Variables globales
+let currentVehicleId = null;
+let originalPlaca = '';
+
+// Función para validar placa
+async function validatePlaca(placa) {
+  // Verificar si la placa está vacía
+  if (!placa) {
+    return 'La placa no puede estar vacía';
+  }
+
+  // Convertir a mayúsculas para consistencia
+  placa = placa.toUpperCase();
+
+  // Verificar el formato de la placa: XXX-123
+  if (!/^[A-Z]{3}-[0-9]{3}$/.test(placa)) {
+    return 'La placa debe tener el formato XXX-123 (tres letras, guion, tres números)';
+  }
+
+  // Verificar si la placa ya existe
+  try {
+    const response = await fetch('/vehiculos/verificar-placa/' + placa);
+    const data = await response.json();
+    if (data.exists) {
+      return 'Esta placa ya está registrada';
+    }
+  } catch (error) {
+    console.error('Error al verificar la placa:', error);
+    return 'Error al verificar la placa';
+  }
+
+  return null; // Si no hay errores
+}
+
+// Función para formatear la placa mientras el usuario escribe
+function formatPlaca(input) {
+  let value = input.value.toUpperCase();
+  
+  // Eliminar caracteres no permitidos
+  value = value.replace(/[^A-Z0-9-]/g, '');
+  
+  // Si hay un guion y no está en la posición 3, lo eliminamos
+  if (value.includes('-') && value.indexOf('-') !== 3) {
+    value = value.replace(/-/g, '');
+  }
+  
+  // Si tenemos 3 letras y no hay guion, agregamos el guion
+  if (value.length >= 3 && !value.includes('-')) {
+    value = value.slice(0, 3) + '-' + value.slice(3);
+  }
+  
+  // Limitar la longitud total a 7 caracteres (XXX-123)
+  value = value.slice(0, 7);
+  
+  input.value = value;
+}
+
+// Función para validar el VIN
+function validateVIN(vin) {
+  // Verificar si el VIN está vacío
+  if (!vin) {
+    return 'El VIN no puede estar vacío';
+  }
+  
+  // Verificar el formato del VIN (17 caracteres alfanuméricos)
+  if (!/^[A-HJ-NPR-Z0-9]{17}$/.test(vin)) {
+    return 'El VIN debe tener 17 caracteres alfanuméricos';
+  }
+
+  return null; // Si no hay errores
+}
+
+// Función para validar la marca
+function validateMarca(marca) {
+  const marcasPermitidas = ['BMW', 'Mini Cooper'];
+  if (!marcasPermitidas.includes(marca)) {
+    return 'La marca debe ser BMW o Mini Cooper';
+  }
+  return null;
+}
+
+// Función para cargar todos los vehículos
+function loadVehicles() {
+  fetch('/vehiculos/vehiculos')
+    .then(response => response.json())
+    .then(data => {
+      const vehicleTableBody = document.getElementById('vehicleTableBody');
+      vehicleTableBody.innerHTML = ''; // Limpiar la tabla antes de agregar los nuevos datos
+
+      data.forEach(vehicle => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${vehicle.Placa}</td>
+          <td>${vehicle.Cliente}</td>
+          <td>${vehicle.Marca}</td>
+          <td>${vehicle.Modelo}</td>
+          <td>${vehicle.Año}</td>
+          <td>${vehicle.VIN}</td>
+          <td>
+            <button class="btn btn-warning me-2" onclick="openEditModal('${vehicle.Id_Vehiculo}')">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-danger" onclick="openDeleteModal('${vehicle.Id_Vehiculo}')">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        `;
+        vehicleTableBody.appendChild(row);
+      });
+    })
+    .catch(error => {
+      console.error('Error al obtener los vehículos:', error);
+      alert('Error al cargar los vehículos. Por favor, intente de nuevo.');
+    });
+}
+
+// Configuración inicial cuando se carga el DOM
+document.addEventListener('DOMContentLoaded', function() {
+  // Modificar el campo de marca en el formulario de agregar
+  const marcaInput = document.getElementById('marca');
+  const marcaSelect = document.createElement('select');
+  marcaSelect.className = marcaInput.className;
+  marcaSelect.id = marcaInput.id;
+  marcaSelect.innerHTML = `
+    <option value="">Seleccione una marca</option>
+    <option value="BMW">BMW</option>
+    <option value="Mini Cooper">Mini Cooper</option>
+  `;
+  marcaInput.parentNode.replaceChild(marcaSelect, marcaInput);
+
+  // Modificar el campo de marca en el formulario de editar
+  const editMarcaInput = document.getElementById('editMarca');
+  const editMarcaSelect = document.createElement('select');
+  editMarcaSelect.className = editMarcaInput.className;
+  editMarcaSelect.id = editMarcaInput.id;
+  editMarcaSelect.innerHTML = `
+    <option value="">Seleccione una marca</option>
+    <option value="BMW">BMW</option>
+    <option value="Mini Cooper">Mini Cooper</option>
+  `;
+  editMarcaInput.parentNode.replaceChild(editMarcaSelect, editMarcaInput);
+
+  // Agregar event listeners para el formateo de placa
+  const placaInput = document.getElementById('placa');
+  const editPlacaInput = document.getElementById('editPlaca');
+  
+  if (placaInput) {
+    placaInput.addEventListener('input', function() {
+      formatPlaca(this);
+    });
+  }
+  
+  if (editPlacaInput) {
+    editPlacaInput.addEventListener('input', function() {
+      formatPlaca(this);
+    });
+  }
+
+  // Cargar los vehículos
+  loadVehicles();
+});
+
+// Función para agregar un nuevo vehículo
+document.getElementById('addVehicleForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const placa = document.getElementById('placa').value.trim();
+  const vin = document.getElementById('vin').value.trim();
+  const marca = document.getElementById('marca').value;
+  
+  // Validar placa
+  const placaError = await validatePlaca(placa);
+  if (placaError) {
+    alert(placaError);
+    return;
+  }
+
+  const vinError = validateVIN(vin);
+  const marcaError = validateMarca(marca);
+  
+  if (vinError) {
+    alert(vinError);
+    return;
+  }
+
+  if (marcaError) {
+    alert(marcaError);
+    return;
+  }
+  
+  const vehicleData = {
+    Placa: placa.toUpperCase(),
+    Cliente: document.getElementById('cliente').value,
+    Marca: marca,
+    Modelo: document.getElementById('modelo').value,
+    Año: document.getElementById('año').value,
+    VIN: vin.toUpperCase()
+  };
+
+  fetch('/vehiculos/vehiculos', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(vehicleData)
+  })
+  .then(async response => {
+    const responseData = await response.json();
+    if (!response.ok) {
+      throw new Error(responseData.error || 'Error desconocido');
+    }
+    return responseData;
+  })
+  .then(data => {
+    console.log('Vehículo agregado:', data);
+    alert('Vehículo agregado exitosamente');
+    document.getElementById('addVehicleForm').reset();
+    $('#addVehicleModal').modal('hide');
+    loadVehicles();
+  })
+  .catch(error => {
+    console.error('Error al agregar el vehículo:', error);
+    if (error.message.includes('VIN')) {
+      alert('Error: El VIN proporcionado ya existe o no es válido. Por favor, verifique e intente de nuevo.');
+    } else {
+      alert('Error al agregar el vehículo: ' + error.message);
+    }
+  });
+});
+
+// Función para abrir el modal de edición
+function openEditModal(id) {
+  currentVehicleId = id;
+  fetch(`/vehiculos/vehiculos/${id}`)
+    .then(response => response.json())
+    .then(data => {
+      originalPlaca = data.Placa; // Guardar la placa original
+      document.getElementById('editPlaca').value = data.Placa;
+      document.getElementById('editCliente').value = data.Cliente;
+      document.getElementById('editMarca').value = data.Marca;
+      document.getElementById('editModelo').value = data.Modelo;
+      document.getElementById('editAño').value = data.Año;
+      document.getElementById('editVin').value = data.VIN;
+      $('#editVehicleModal').modal('show');
+    })
+    .catch(error => {
+      console.error('Error al obtener el vehículo:', error);
+      alert('Error al cargar los datos del vehículo. Por favor, intente de nuevo.');
+    });
+}
+
+// Función para editar un vehículo
+document.getElementById('editVehicleForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const placa = document.getElementById('editPlaca').value.trim();
+  const vin = document.getElementById('editVin').value.trim();
+  const marca = document.getElementById('editMarca').value;
+  
+  // Solo validar la placa si ha cambiado
+  if (placa !== originalPlaca) {
+    const placaError = await validatePlaca(placa);
+    if (placaError) {
+      alert(placaError);
+      return;
+    }
+  }
+
+  const vinError = validateVIN(vin);
+  const marcaError = validateMarca(marca);
+  
+  if (vinError) {
+    alert(vinError);
+    return;
+  }
+
+  if (marcaError) {
+    alert(marcaError);
+    return;
+  }
+  
+  const vehicleData = {
+    Placa: placa.toUpperCase(),
+    Cliente: document.getElementById('editCliente').value,
+    Marca: marca,
+    Modelo: document.getElementById('editModelo').value,
+    Año: document.getElementById('editAño').value,
+    VIN: vin.toUpperCase()
+  };
+
+  fetch(`/vehiculos/vehiculos/${currentVehicleId}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(vehicleData)
+  })
+  .then(async response => {
+    const responseData = await response.json();
+    if (!response.ok) {
+      throw new Error(responseData.error || 'Error desconocido');
+    }
+    return responseData;
+  })
+  .then(data => {
+    console.log('Vehículo actualizado:', data);
+    alert('Vehículo actualizado exitosamente');
+    $('#editVehicleModal').modal('hide');
+    loadVehicles();
+  })
+  .catch(error => {
+    console.error('Error al actualizar el vehículo:', error);
+    if (error.message.includes('VIN')) {
+      alert('Error: El VIN proporcionado ya existe o no es válido. Por favor, verifique e intente de nuevo.');
+    } else {
+      alert('Error al actualizar el vehículo: ' + error.message);
+    }
+  });
+});
+
+// Función para abrir el modal de eliminación
+function openDeleteModal(id) {
+  currentVehicleId = id;
+  $('#deleteVehicleModal').modal('show');
+}
+
+// Función para eliminar vehículo
+document.getElementById('deleteVehicle').addEventListener('click', function() {
+  fetch(`/vehiculos/vehiculos/${currentVehicleId}`, {
+    method: 'DELETE'
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Vehículo eliminado:', data);
+    alert('Vehículo eliminado exitosamente');
+    $('#deleteVehicleModal').modal('hide');
+    loadVehicles();
+  })
+  .catch(error => {
+    console.error('Error al eliminar el vehículo:', error);
+    alert('Error al eliminar el vehículo. Por favor, intente de nuevo.');
+  });
+});
+    </script>
+  </body>
+</html>
